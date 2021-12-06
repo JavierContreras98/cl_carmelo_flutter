@@ -1,0 +1,1 @@
+Se debe crear una carpeta de nombre clcarmelo en htdocs del XAMPP para evitar problemas de conexion
