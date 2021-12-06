@@ -1,6 +1,5 @@
 import 'package:cl_carmelo/src/screens/citas_pedientes/componentes/banner.dart';
 import 'package:cl_carmelo/src/screens/citas_pedientes/componentes/contenedor.dart';
-import 'package:cl_carmelo/src/screens/registo_cita/registro_cita.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
@@ -36,7 +35,7 @@ class Cita {
 class MainDesignCitasPendientes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final String apiURL = 'http://192.168.0.18/clcarmelo/obtenerCitasPend.php';
+    final String apiURL = 'http://192.168.0.13/clcarmelo/obtenerCitasPend.php';
 
   Future<List<Cita>> fetchCita() async {
 

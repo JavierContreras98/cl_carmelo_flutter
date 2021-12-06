@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class PerfilMedicoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-   return MainDesignPerfilMedico();
+   return FilterNetworkListPage();
   }
 }
 

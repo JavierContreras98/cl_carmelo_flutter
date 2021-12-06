@@ -16,7 +16,7 @@ class FormLogin extends StatelessWidget {
 
     
   Future<dynamic> login() async {
-    var url= "http://192.168.0.18/clcarmelo/login.php";
+    var url= "http://192.168.0.13/clcarmelo/login.php";
     final response = await http.post(Uri.parse(url), body: {
       "num_exp": expediente.text,
       "pass": pass.text

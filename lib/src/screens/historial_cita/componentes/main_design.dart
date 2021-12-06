@@ -36,7 +36,7 @@ class MainDesignHistorialCita extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    final String apiURL = 'http://192.168.0.18/clcarmelo/obtenerCitaInfo.php';
+    final String apiURL = 'http://192.168.0.13/clcarmelo/obtenerCitaInfo.php';
 
   Future<List<Cita>> fetchCita() async {
 

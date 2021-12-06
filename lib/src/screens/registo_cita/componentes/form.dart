@@ -23,7 +23,7 @@ class _FormRegistroCita extends State<FormRegistroCita> {
   Object selectedName;
 
   Future getAllName()async{
-    var response = await http.get(Uri.parse("http://192.168.0.18/clcarmelo/obtenerEspecialidades.php"));
+    var response = await http.get(Uri.parse("http://192.168.0.13/clcarmelo/obtenerEspecialidades.php"));
     var jsonBody = response.body;
     var jsonData = json.decode(jsonBody);
 
@@ -40,7 +40,7 @@ class _FormRegistroCita extends State<FormRegistroCita> {
 
   Future getMedicoxEsp() async{
 
-    var response = await http.get(Uri.parse("http://192.168.0.18/clcarmelo/ObtenerMedicoxEsp.php"));
+    var response = await http.get(Uri.parse("http://192.168.0.13/clcarmelo/ObtenerMedicoxEsp.php"));
     var jsonBody = response.body;
     var jsonData = json.decode(jsonBody);
 
@@ -61,7 +61,7 @@ class _FormRegistroCita extends State<FormRegistroCita> {
 
   void registrarCita(){
     setState(() {
-      var url = "http://192.168.0.18/clcarmelo/registrarCita.php";
+      var url = "http://192.168.0.13/clcarmelo/registrarCita.php";
 
       http.post(Uri.parse(url),body: {
       "hora_cita": timeinput.text,
@@ -132,16 +132,7 @@ class _FormRegistroCita extends State<FormRegistroCita> {
                       },).toList(),
                         onChanged: (value) => setState(()=>this.selectedName2 = value),
                       ),
-                  //SizedBox(height: 20,),
-                  //TextFormField(controller: especialidad,decoration: InputDecoration(hintText: "Seleccione un especialidad" ),
-                  //para campo de contraseña
-                  //obscureText: true,
-                  //),
-                  //SizedBox(height: 20,),
-                  //TextFormField(controller: medico,decoration: InputDecoration(hintText: "Seleccione un medico" ),
-                  //para campo de contraseña
-                  //obscureText: true,
-                  //),
+            
                   SizedBox(height: 20,),
                   TextFormField(controller: dateinput,onTap: () async {
                   DateTime pickedDate = await showDatePicker(
