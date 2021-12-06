@@ -20,7 +20,7 @@ class FormRegistroPaciente extends StatelessWidget {
   TextEditingController pass = new TextEditingController();
 
   void agregarPaciente(){
-    var url = "http://192.168.0.13/clcarmelo/registrarPaciente.php";
+    var url = "https://flutterclcarmelo.000webhostapp.com/ws/registrarPaciente.php";
 
     http.post(Uri.parse(url),body: {
       "num_exp": expediente.text,

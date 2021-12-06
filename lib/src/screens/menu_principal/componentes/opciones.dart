@@ -1,6 +1,7 @@
 import 'package:cl_carmelo/src/screens/citas_pedientes/citas_pendientes.dart';
 import 'package:cl_carmelo/src/screens/historial_cita/historial_cita.dart';
 import 'package:cl_carmelo/src/screens/integrantes/integrantes.dart';
+import 'package:cl_carmelo/src/screens/map_carmelo/map_screen.dart';
 import 'package:cl_carmelo/src/screens/menu_principal/componentes/banner.dart';
 import 'package:cl_carmelo/src/screens/menu_principal/componentes/contenedor.dart';
 import 'package:cl_carmelo/src/screens/perfil_medico/perfil_medico.dart';
@@ -119,7 +120,9 @@ class OpcionesMenuPrincipal extends StatelessWidget {
                   color: Color.fromRGBO(218, 186, 118, 1),
                   margin: EdgeInsets.all(8.0) ,
                   child: InkWell(
-                    onTap: (){},
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => GoogleMapScreen()));
+                    },
                     splashColor: Colors.amber.shade100,
                     child: Center(
                       child: Column(

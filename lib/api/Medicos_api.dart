@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 
 class MedicosApi {
   static Future<List<Medico>> getMedicos(String query) async {
-    final url = Uri.parse('http://192.168.0.13/prueba/ObetenerInfo.php');
+    final url = Uri.parse('https://flutterclcarmelo.000webhostapp.com/ws/obtenerInfoMedico.php');
     final response = await http.get(url);
 
     if (response.statusCode == 200) {

@@ -23,7 +23,7 @@ class _FormRegistroCita extends State<FormRegistroCita> {
   Object selectedName;
 
   Future getAllName()async{
-    var response = await http.get(Uri.parse("http://192.168.0.13/clcarmelo/obtenerEspecialidades.php"));
+    var response = await http.get(Uri.parse("https://flutterclcarmelo.000webhostapp.com/ws/obtenerEspecialidades.php"));
     var jsonBody = response.body;
     var jsonData = json.decode(jsonBody);
 
@@ -40,7 +40,7 @@ class _FormRegistroCita extends State<FormRegistroCita> {
 
   Future getMedicoxEsp() async{
 
-    var response = await http.get(Uri.parse("http://192.168.0.13/clcarmelo/ObtenerMedicoxEsp.php"));
+    var response = await http.get(Uri.parse("https://flutterclcarmelo.000webhostapp.com/ws/obtenerMedicoxEsp.php"));
     var jsonBody = response.body;
     var jsonData = json.decode(jsonBody);
 
@@ -61,7 +61,7 @@ class _FormRegistroCita extends State<FormRegistroCita> {
 
   void registrarCita(){
     setState(() {
-      var url = "http://192.168.0.13/clcarmelo/registrarCita.php";
+      var url = "https://flutterclcarmelo.000webhostapp.com/ws/registrarCita.php";
 
       http.post(Uri.parse(url),body: {
       "hora_cita": timeinput.text,
@@ -117,7 +117,7 @@ class _FormRegistroCita extends State<FormRegistroCita> {
                       },).toList(),
                         onChanged: (value) => setState(()=>this.selectedName = value),
                       ),
-                      
+                      SizedBox(height: 20,),
                       DropdownButton(
                       value: selectedName2,
                       iconSize: 36,
@@ -170,7 +170,7 @@ class _FormRegistroCita extends State<FormRegistroCita> {
                   //obscureText: true,
                   ),
                   SizedBox(height: 20,),
-                  TextFormField(controller: paciente,decoration: InputDecoration(hintText: "Ingrese numero de id_paciente" ),
+                  TextFormField(controller: paciente,decoration: InputDecoration(hintText: "Ingrese su número de expediente" ),
                   //para campo de contraseña
                   //obscureText: true,
                   ),

@@ -35,7 +35,7 @@ class Cita {
 class MainDesignCitasPendientes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final String apiURL = 'http://192.168.0.13/clcarmelo/obtenerCitasPend.php';
+    final String apiURL = 'https://flutterclcarmelo.000webhostapp.com/ws/obtenerCitasPend.php';
 
   Future<List<Cita>> fetchCita() async {
 
@@ -114,15 +114,15 @@ class MainDesignCitasPendientes extends StatelessWidget {
                     child: Column(
                       mainAxisSize: MainAxisSize.min ,
                       children: [
-                          Text("Expediente: "+data.expediente,style: TextStyle(fontSize: 21),),
+                          Text("EXPEDIENTE "+data.expediente,style: TextStyle(fontSize: 21),),
                           SizedBox(height: 8,),
-                          Text("Fecha: "+data.fecha,style: TextStyle(fontSize: 21),),
+                          Text("FECHA: "+data.fecha,style: TextStyle(fontSize: 21),),
                           SizedBox(height: 8,),
-                          Text("Hora: "+data.hora,style: TextStyle(fontSize: 21),),
+                          Text("HORA: "+data.hora,style: TextStyle(fontSize: 21),),
                           SizedBox(height: 8,),  
-                          Text("Consulta  "+data.especialidad,style: TextStyle(fontSize: 21,fontWeight: FontWeight.bold),),
+                          Text("CONSULTA  "+data.especialidad,style: TextStyle(fontSize: 21,fontWeight: FontWeight.bold),),
                           SizedBox(height: 8,),  
-                          Text("Medico: "+data.medico,style: TextStyle(fontSize: 21),),
+                          Text("MEDICO: "+data.medico,style: TextStyle(fontSize: 21),),
                           SizedBox(height: 8,),   
                     ],),
                   ),
